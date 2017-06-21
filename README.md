@@ -1,1 +1,2 @@
-Coming soon
+[![Build Status](https://travis-ci.org/cassiomolin/example-undertow-weld-jersey-jwt.svg?branch=master)](https://travis-ci.org/cassiomolin/example-undertow-weld-jersey-jwt)
+[![MIT Licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/cassiomolin/example-undertow-weld-jersey-jwt/master/LICENSE.txt)

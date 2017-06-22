@@ -5,10 +5,11 @@
 
 This sample application demonstrates how to perform token-based authentication using:
 
-* **Jersey:** JAX-RS reference implementation
+* **Jersey:** JAX-RS reference implementation to create RESTful web services
 * **Jackson:** JSON parser for Java
 * **Undertow:** Embedded Servlet container
 * **Weld:** CDI reference implementation
+* **Hibernate:** Persistence framework relational databases
 * **Arquillian:** Testing framework
 
 This example is inspired in [my Stack Overflow best answer about token-based authentication in Jersey][answer].

@@ -17,7 +17,7 @@ This example application demonstrates how to perform token-based authentication 
 
 This example is inspired in [my Stack Overflow best answer about token-based authentication in Jersey][answer].
 
-For an implementation using Spring Security, have a look at [example-springboot-jersey-jwt][].
+For an implementation using Spring Security, have a look at the [`example-springboot-jersey-jwt`][example-with-spring] project.
 
 ## How token-based authentication works?
 
@@ -152,4 +152,4 @@ Alternatively to cURL, you can use [Postman][] to target the REST API. The Postm
 [Postman]: https://www.getpostman.com/
 [postman GitHub directory]: https://github.com/cassiomolin/example-undertow-weld-jersey-jwt/tree/master/src/main/postman
 [answer]: https://stackoverflow.com/a/26778123/1426227
-[example-springboot-jersey-jwt]: https://github.com/cassiomolin/example-springboot-jersey-jwt
+[example-with-spring]: https://github.com/cassiomolin/example-springboot-jersey-jwt

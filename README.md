@@ -3,14 +3,16 @@
 [![Build Status](https://travis-ci.org/cassiomolin/example-undertow-weld-jersey-jwt.svg?branch=master)](https://travis-ci.org/cassiomolin/example-undertow-weld-jersey-jwt)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/cassiomolin/example-undertow-weld-jersey-jwt/master/LICENSE.txt)
 
-This sample application demonstrates how to perform token-based authentication using:
+This example application demonstrates how to perform token-based authentication using:
 
-* **Jersey:** JAX-RS reference implementation to create RESTful web services
-* **Jackson:** JSON parser for Java
-* **Undertow:** Embedded Servlet container
-* **Weld:** CDI reference implementation
-* **Hibernate:** Persistence framework relational databases
-* **Arquillian:** Testing framework
+ - **Jersey:** JAX-RS reference implementation for creating RESTful web services in Java
+ - **Jackson:** JSON parser for Java
+ - **Undertow:** Servlet container
+ - **Weld:** CDI reference implementation
+ - **Hibernate ORM:** Persistence framework relational databases (JPA implementation)
+ - **Arquillian:** Testing framework
+ - **JJWT:** Library for creating and parsing JSON Web Tokens (JWTs) in Java
+ - **jBCrypt:** Implementation for the _bcrypt_ password hashing function in Java
 
 This example is inspired in [my Stack Overflow best answer about token-based authentication in Jersey][answer].
 

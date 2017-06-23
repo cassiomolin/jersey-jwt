@@ -13,8 +13,11 @@ This example application demonstrates how to perform token-based authentication 
  - **Arquillian:** Testing framework
  - **JJWT:** Library for creating and parsing JSON Web Tokens (JWTs) in Java
  - **jBCrypt:** Implementation for the _bcrypt_ password hashing function in Java
+ - **H2:** In memory relational database
 
 This example is inspired in [my Stack Overflow best answer about token-based authentication in Jersey][answer].
+
+For an implementation using Spring Security, have a look at [example-springboot-jersey-jwt][].
 
 ## How token-based authentication works?
 
@@ -149,3 +152,4 @@ Alternatively to cURL, you can use [Postman][] to target the REST API. The Postm
 [Postman]: https://www.getpostman.com/
 [postman GitHub directory]: https://github.com/cassiomolin/example-undertow-weld-jersey-jwt/tree/master/src/main/postman
 [answer]: https://stackoverflow.com/a/26778123/1426227
+[example-springboot-jersey-jwt]: https://github.com/cassiomolin/example-springboot-jersey-jwt

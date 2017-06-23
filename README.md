@@ -9,7 +9,7 @@ This example application demonstrates how to perform token-based authentication 
  - **Jackson:** JSON parser for Java
  - **Undertow:** Servlet container
  - **Weld:** CDI reference implementation
- - **Hibernate ORM:** Persistence framework relational databases (JPA implementation)
+ - **Hibernate ORM:** Persistence framework for relational databases (JPA implementation)
  - **Arquillian:** Testing framework
  - **JJWT:** Library for creating and parsing JSON Web Tokens (JWTs) in Java
  - **jBCrypt:** Implementation for the _bcrypt_ password hashing function in Java

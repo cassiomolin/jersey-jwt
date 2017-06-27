@@ -47,7 +47,7 @@ JWT allows you to perform stateless authentication, that is, you won't need to p
 
 Your application can provide some functionality to revoke the tokens, but always consider revoking the tokens when the users change their password. When persisting tokens, consider removing the old ones in order to prevent your database from growing indefinitely.
 
-## How to build and run this application?
+## Building and running this application
 
 To build and run this application, follow these steps:
 
@@ -57,18 +57,32 @@ To build and run this application, follow these steps:
 1. Package the application: `mvn package`.
 1. Change into the `target` directory: `cd target`
 1. You should see a file with the following or a similar name: `undertow-weld-jersey-jwt-1.0.jar`.
-1. Execute the JAR: `java -jar `undertow-weld-jersey-jwt-1.0.jar`.
+1. Execute the JAR: `java -jar undertow-weld-jersey-jwt-1.0.jar`.
 1. The application should be available at `http://localhost:8080/api`.
 
-## What will you find in this application?
+## Application overview
+
+Find below a quick description of the most relevant classes of this application:
+
+- [`AuthenticationResource`](src/main/java/com/cassiomolin/example/security/api/resources/AuthenticationResource.java): REST endpoint for exchanging hard credentials for a JWT token.
+
+- [`AuthenticationFilter`](src/main/java/com/cassiomolin/example/security/api/filter/AuthenticationFilter.java): [`ContainerRequestFilter`](https://docs.oracle.com/javaee/7/api/javax/ws/rs/container/ContainerRequestFilter.html) implementation for extracting the authentication token from the `Authorization` header of the HTTP request.
+
+- [`AuthorizationFilter`](src/main/java/com/cassiomolin/example/security/api/filter/AuthorizationFilter.java): [`ContainerRequestFilter`](https://docs.oracle.com/javaee/7/api/javax/ws/rs/container/ContainerRequestFilter.html) implementation for performing role-based authorization using the followin Java Security annotations: [`@RolesAllowed`](https://docs.oracle.com/javaee/7/api/javax/annotation/security/RolesAllowed.html), [`@PermitAll`](https://docs.oracle.com/javaee/7/api/javax/annotation/security/PermitAll.html) and [`@DenyAll`](https://docs.oracle.com/javaee/7/api/javax/annotation/security/DenyAll.html) annotations.
+
+- [`TokenBasedSecurityContext`](src/main/java/com/cassiomolin/example/security/api/TokenBasedSecurityContext.java): [`SecurityContext`](https://docs.oracle.com/javaee/7/api/javax/ws/rs/core/SecurityContext.html) implementation for token-based authentication.
+
+- [`AuthenticatedUserDetails`](src/main/java/com/cassiomolin/example/security/api/AuthenticatedUserDetails.java): [`Principal`](http://docs.oracle.com/javase/8/docs/api/java/security/Principal.html) implementation that holds details about the authenticated user. Used in the [`TokenBasedSecurityContext`](src/main/java/com/cassiomolin/example/security/api/TokenBasedSecurityContext.java).
 
 When the application starts up, the database will be populated with the following users:
 
- ID | Username | Password | Active | Roles
-----|--------- |----------|--------|-------------
- 1  | admin    | password | true   | ADMIN, USER
- 2  | user     | password | true   | USER
- 2  | disabled | password | false  | USER
+ID | Username | Password | Active | Roles
+---|--------- |----------|--------|-------------
+1  | admin    | password | true   | ADMIN, USER
+2  | user     | password | true   | USER
+3  | disabled | password | false  | USER
+
+## REST API overview
 
 This application provides a REST API that currently supports the following operations:
 

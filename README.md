@@ -60,7 +60,7 @@ To build and run this application, follow these steps:
 1. Execute the JAR: `java -jar undertow-weld-jersey-jwt-1.0.jar`.
 1. The application should be available at `http://localhost:8080/api`.
 
-## Quick words on Undertow and uber-jar
+### Quick words on Undertow and uber-jar
 
 This application is packed as an [uber-jar](https://stackoverflow.com/q/11947037/1426227), making it easy to run. So you don't need to be bothered by installing a servlet container such as Tomcat and then deploy the application on it. Just execute `java -jar <jar-name>` and the application will be up and running. 
 

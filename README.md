@@ -60,6 +60,14 @@ To build and run this application, follow these steps:
 1. Execute the JAR: `java -jar undertow-weld-jersey-jwt-1.0.jar`.
 1. The application should be available at `http://localhost:8080/api`.
 
+When the application starts up, the database will be populated with the following users:
+
+ID | Username | Password | Active | Roles
+---|--------- |----------|--------|-------------
+1  | admin    | password | true   | ADMIN, USER
+2  | user     | password | true   | USER
+3  | disabled | password | false  | USER
+
 ### Quick words on Undertow and uber-jars
 
 This application is packed as an [uber-jar](https://stackoverflow.com/q/11947037/1426227), making it easy to run, so you don't need to be bothered by installing a servlet container such as Tomcat and then deploy the application on it. Just execute `java -jar <jar-file>` and the application will be up and running. 
@@ -81,14 +89,6 @@ Find below a quick description of the most relevant classes of this application:
 - [`TokenBasedSecurityContext`](src/main/java/com/cassiomolin/example/security/api/TokenBasedSecurityContext.java): [`SecurityContext`](https://docs.oracle.com/javaee/7/api/javax/ws/rs/core/SecurityContext.html) implementation for token-based authentication.
 
 - [`AuthenticatedUserDetails`](src/main/java/com/cassiomolin/example/security/api/AuthenticatedUserDetails.java): [`Principal`](http://docs.oracle.com/javase/8/docs/api/java/security/Principal.html) implementation that holds details about the authenticated user. Used in the [`TokenBasedSecurityContext`](src/main/java/com/cassiomolin/example/security/api/TokenBasedSecurityContext.java).
-
-When the application starts up, the database will be populated with the following users:
-
-ID | Username | Password | Active | Roles
----|--------- |----------|--------|-------------
-1  | admin    | password | true   | ADMIN, USER
-2  | user     | password | true   | USER
-3  | disabled | password | false  | USER
 
 ## REST API overview
 

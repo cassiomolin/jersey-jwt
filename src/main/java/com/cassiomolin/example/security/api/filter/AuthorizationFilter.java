@@ -16,6 +16,11 @@ import javax.ws.rs.ext.Provider;
 import java.io.IOException;
 import java.lang.reflect.Method;
 
+/**
+ * Role authorization filter.
+ *
+ * @author cassiomolin
+ */
 @Provider
 @Dependent
 @Priority(Priorities.AUTHORIZATION)

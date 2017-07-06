@@ -1,6 +1,6 @@
 package com.cassiomolin.example.common.api.config;
 
-import com.cassiomolin.example.common.api.providers.ObjectMapperProvider;
+import com.cassiomolin.example.common.api.provider.ObjectMapperProvider;
 import com.cassiomolin.example.greeting.api.resource.GreetingResource;
 import com.cassiomolin.example.security.api.exeptionmapper.AccessDeniedExceptionMapper;
 import com.cassiomolin.example.security.api.exeptionmapper.AuthenticationExceptionMapper;

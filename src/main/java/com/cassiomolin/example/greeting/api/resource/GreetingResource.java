@@ -13,6 +13,11 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 
+/**
+ * JAX-RS resource class that provides operations for greetings.
+ *
+ * @author cassiomolin
+ */
 @RequestScoped
 @Path("greetings")
 public class GreetingResource {

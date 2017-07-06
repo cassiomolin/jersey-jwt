@@ -7,7 +7,7 @@ import java.util.Collections;
 import java.util.Set;
 
 /**
- * Default {@link Principal} implementation.
+ * {@link Principal} implementation with a set of {@link Authority}.
  *
  * @author cassiomolin
  */

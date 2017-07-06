@@ -15,6 +15,11 @@ import static io.undertow.servlet.Servlets.listener;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
+/**
+ * Tests for the authentication resource class.
+ *
+ * @author cassiomolin
+ */
 @RunWith(Arquillian.class)
 public class AuthenticationResourceTest extends ArquillianTest {
 

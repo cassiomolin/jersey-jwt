@@ -4,7 +4,7 @@ package com.cassiomolin.example.greeting.service;
 import javax.enterprise.context.ApplicationScoped;
 
 /**
- * Provides service operations for greetings.
+ * Service class that provides operations for greetings.
  *
  * @author cassiomolin
  */

@@ -18,6 +18,11 @@ import javax.ws.rs.core.SecurityContext;
 import javax.ws.rs.ext.Provider;
 import java.io.IOException;
 
+/**
+ * JWT authentication filter.
+ *
+ * @author cassiomolin
+ */
 @Provider
 @Dependent
 @Priority(Priorities.AUTHENTICATION)

@@ -16,6 +16,11 @@ import static io.undertow.servlet.Servlets.listener;
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.*;
 
+/**
+ * Tests for the user resource class.
+ *
+ * @author cassiomolin
+ */
 @RunWith(Arquillian.class)
 public class UserResourceTest extends ArquillianTest {
 

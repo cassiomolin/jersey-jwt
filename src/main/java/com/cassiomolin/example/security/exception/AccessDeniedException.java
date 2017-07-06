@@ -2,6 +2,8 @@ package com.cassiomolin.example.security.exception;
 
 /**
  * Thrown if errors occur during the authorization process.
+ *
+ * @author cassiomolin
  */
 public class AccessDeniedException extends RuntimeException {
 

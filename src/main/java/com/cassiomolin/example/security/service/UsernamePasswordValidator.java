@@ -8,6 +8,11 @@ import com.cassiomolin.example.user.service.UserService;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
+/**
+ * Component for validating user credentials.
+ *
+ * @author cassiomolin
+ */
 @ApplicationScoped
 public class UsernamePasswordValidator {
 

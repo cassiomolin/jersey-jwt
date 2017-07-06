@@ -8,6 +8,11 @@ import javax.persistence.EntityManager;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Service that provides operations for {@link User}s.
+ *
+ * @author cassiomolin
+ */
 @ApplicationScoped
 public class UserService {
 

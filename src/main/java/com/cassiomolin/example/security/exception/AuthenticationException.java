@@ -2,6 +2,8 @@ package com.cassiomolin.example.security.exception;
 
 /**
  * Thrown if errors occur during the authentication process.
+ *
+ * @author cassiomolin
  */
 public class AuthenticationException extends RuntimeException {
 

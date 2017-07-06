@@ -8,6 +8,13 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
+/**
+ * Read the <code>application.properties</code> file from the classpath and produce values that can be injected with @{@link Configurable}.
+ * <p>
+ * It's a simple and lightweight alternative to the Apache DeltaSpike Configuration Mechanism.
+ *
+ * @author cassiomolin
+ */
 @ApplicationScoped
 public class ConfigurationProducer {
 

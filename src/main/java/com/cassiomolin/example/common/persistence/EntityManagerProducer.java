@@ -13,7 +13,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 /**
- * CDI producer for JPA {@link EntityManager}.
+ * CDI producer for the JPA {@link EntityManager}.
  *
  * @author cassiomolin
  */
@@ -46,7 +46,8 @@ public class EntityManagerProducer {
         }
     }
 
-    // Hack to force Hibernate to create tables and populate the database when the application starts up
+    // Hack to force the EntityManager provider (Hibernate in this case) to create
+    // tables and populate the database when the application starts up
     public void init(@Observes @Initialized(ApplicationScoped.class) Object init) {
         factory.createEntityManager().close();
     }

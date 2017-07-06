@@ -23,6 +23,11 @@ import java.net.URI;
 import static io.undertow.servlet.Servlets.deployment;
 import static io.undertow.servlet.Servlets.listener;
 
+/**
+ * Base Arquillian test class.
+ *
+ * @author cassiomolin
+ */
 public abstract class ArquillianTest {
 
     @ArquillianResource

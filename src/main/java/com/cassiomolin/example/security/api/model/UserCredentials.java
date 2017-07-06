@@ -2,6 +2,8 @@ package com.cassiomolin.example.security.api.model;
 
 /**
  * API model for the user credentials.
+ *
+ * @author cassiomolin
  */
 public class UserCredentials {
 

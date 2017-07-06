@@ -1,4 +1,4 @@
-package com.cassiomolin.example.common.api.providers;
+package com.cassiomolin.example.common.api.provider;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -11,7 +11,7 @@ import javax.ws.rs.ext.ContextResolver;
 import javax.ws.rs.ext.Provider;
 
 /**
- * Provider for {@link ObjectMapper}.
+ * JAX_RS provider for {@link ObjectMapper}.
  *
  * @author cassiomolin
  */

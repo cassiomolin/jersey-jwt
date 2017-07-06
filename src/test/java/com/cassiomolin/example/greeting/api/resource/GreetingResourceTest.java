@@ -11,6 +11,11 @@ import javax.ws.rs.core.Response;
 import static io.undertow.servlet.Servlets.listener;
 import static org.junit.Assert.assertEquals;
 
+/**
+ * Tests for the greeting resource class.
+ *
+ * @author cassiomolin
+ */
 @RunWith(Arquillian.class)
 public class GreetingResourceTest extends ArquillianTest {
 

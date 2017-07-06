@@ -21,7 +21,7 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 
 /**
- * Resource class for authentication-related operations.
+ * JAX-RS resource class that provides operations for authentication.
  *
  * @author cassiomolin
  */
@@ -38,6 +38,12 @@ public class AuthenticationResource {
     @Inject
     private AuthenticationTokenService authenticationTokenService;
 
+    /**
+     * Validate user credentials and issue a token for the user.
+     *
+     * @param credentials
+     * @return
+     */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
@@ -51,6 +57,11 @@ public class AuthenticationResource {
         return Response.ok(authenticationToken).build();
     }
 
+    /**
+     * Refresh the authentication token for the current user.
+     *
+     * @return
+     */
     @POST
     @Path("refresh")
     @Produces(MediaType.APPLICATION_JSON)

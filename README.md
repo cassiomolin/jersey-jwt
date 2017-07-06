@@ -80,7 +80,7 @@ The uber-jar is created with the [Apache Maven Shade Plugin](https://maven.apach
 
 Find below a quick description of the most relevant classes of this application:
 
-- [`AuthenticationResource`](src/main/java/com/cassiomolin/example/security/api/resources/AuthenticationResource.java): REST endpoint for exchanging hard credentials for a JWT token.
+- [`AuthenticationResource`](src/main/java/com/cassiomolin/example/security/api/resource/AuthenticationResource.java): REST endpoint for exchanging hard credentials for a JWT token.
 
 - [`AuthenticationFilter`](src/main/java/com/cassiomolin/example/security/api/filter/AuthenticationFilter.java): [`ContainerRequestFilter`](https://docs.oracle.com/javaee/7/api/javax/ws/rs/container/ContainerRequestFilter.html) implementation for extracting the authentication token from the `Authorization` header of the HTTP request.
 

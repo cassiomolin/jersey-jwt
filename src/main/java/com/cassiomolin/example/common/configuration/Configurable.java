@@ -1,4 +1,4 @@
-package com.cassiomolin.example.common.config;
+package com.cassiomolin.example.common.configuration;
 
 import javax.enterprise.util.Nonbinding;
 import javax.inject.Qualifier;

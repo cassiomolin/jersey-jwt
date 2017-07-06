@@ -1,19 +1,16 @@
-package com.cassiomolin.example.common;
+package com.cassiomolin.example.common.api.config;
 
 import com.cassiomolin.example.common.api.providers.ObjectMapperProvider;
-import com.cassiomolin.example.greeting.api.resources.GreetingResource;
-import com.cassiomolin.example.security.api.exeptionmappers.AccessDeniedExceptionMapper;
-import com.cassiomolin.example.security.api.exeptionmappers.AuthenticationExceptionMapper;
-import com.cassiomolin.example.security.api.exeptionmappers.AuthenticationTokenRefreshmentExceptionMapper;
+import com.cassiomolin.example.greeting.api.resource.GreetingResource;
+import com.cassiomolin.example.security.api.exeptionmapper.AccessDeniedExceptionMapper;
+import com.cassiomolin.example.security.api.exeptionmapper.AuthenticationExceptionMapper;
+import com.cassiomolin.example.security.api.exeptionmapper.AuthenticationTokenRefreshmentExceptionMapper;
 import com.cassiomolin.example.security.api.filter.AuthenticationFilter;
 import com.cassiomolin.example.security.api.filter.AuthorizationFilter;
-import com.cassiomolin.example.security.api.resources.AuthenticationResource;
-import com.cassiomolin.example.user.api.resources.UserResource;
-import com.cassiomolin.example.user.service.UserService;
-import org.glassfish.hk2.utilities.binding.AbstractBinder;
+import com.cassiomolin.example.security.api.resource.AuthenticationResource;
+import com.cassiomolin.example.user.api.resource.UserResource;
 import org.glassfish.jersey.server.ResourceConfig;
 
-import javax.enterprise.context.ApplicationScoped;
 import javax.ws.rs.ApplicationPath;
 
 /**

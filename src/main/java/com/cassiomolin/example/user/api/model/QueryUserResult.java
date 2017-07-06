@@ -5,10 +5,12 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 
 import java.util.Set;
 
-import static com.fasterxml.jackson.annotation.JsonInclude.*;
+import static com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 /**
  * API model returning user details.
+ *
+ * @author cassiomolin
  */
 @JsonInclude(Include.NON_NULL)
 public class QueryUserResult {

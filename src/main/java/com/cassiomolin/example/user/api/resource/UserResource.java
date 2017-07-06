@@ -1,4 +1,4 @@
-package com.cassiomolin.example.user.api.resources;
+package com.cassiomolin.example.user.api.resource;
 
 import com.cassiomolin.example.user.api.model.QueryUserResult;
 import com.cassiomolin.example.user.domain.User;

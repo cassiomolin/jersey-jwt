@@ -1,7 +1,9 @@
-package com.cassiomolin.example.security.api.resources;
+package com.cassiomolin.example.security.api.model;
 
 /**
  * API model for the authentication token.
+ *
+ * @author cassiomolin
  */
 public class AuthenticationToken {
 

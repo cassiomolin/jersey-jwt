@@ -1,8 +1,8 @@
 package com.cassiomolin.example;
 
-import com.cassiomolin.example.common.JerseyConfig;
+import com.cassiomolin.example.common.api.config.JerseyConfig;
 import com.cassiomolin.example.security.api.model.UserCredentials;
-import com.cassiomolin.example.security.api.resources.AuthenticationToken;
+import com.cassiomolin.example.security.api.model.AuthenticationToken;
 import io.undertow.servlet.Servlets;
 import org.glassfish.jersey.servlet.ServletContainer;
 import org.jboss.arquillian.container.test.api.Deployment;

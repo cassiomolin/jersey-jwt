@@ -1,7 +1,10 @@
-package com.cassiomolin.example.greeting.api.resources;
+package com.cassiomolin.example.greeting.api.resource;
+
+import com.cassiomolin.example.greeting.service.GreetingService;
 
 import javax.annotation.security.PermitAll;
 import javax.enterprise.context.RequestScoped;
+import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -17,12 +20,15 @@ public class GreetingResource {
     @Context
     private SecurityContext securityContext;
 
+    @Inject
+    private GreetingService greetingService;
+
     @GET
     @Path("public")
     @Produces(MediaType.TEXT_PLAIN)
     @PermitAll
     public Response getPublicGreeting() {
-        return Response.ok("Hello from the other side!").build();
+        return Response.ok(greetingService.getPublicGreeting()).build();
     }
 
     @GET
@@ -30,6 +36,6 @@ public class GreetingResource {
     @Produces(MediaType.TEXT_PLAIN)
     public Response getProtectedGreeting() {
         String username = securityContext.getUserPrincipal().getName();
-        return Response.ok(String.format("Hello %s!", username)).build();
+        return Response.ok(greetingService.getGreetingForUser(username)).build();
     }
 }

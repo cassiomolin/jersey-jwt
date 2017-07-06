@@ -1,4 +1,4 @@
-package com.cassiomolin.example.common;
+package com.cassiomolin.example.common.persistence;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
@@ -8,8 +8,15 @@ import javax.enterprise.context.RequestScoped;
 import javax.enterprise.event.Observes;
 import javax.enterprise.inject.Disposes;
 import javax.enterprise.inject.Produces;
-import javax.persistence.*;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 
+/**
+ * CDI producer for JPA {@link EntityManager}.
+ *
+ * @author cassiomolin
+ */
 @ApplicationScoped
 public class EntityManagerProducer {
 

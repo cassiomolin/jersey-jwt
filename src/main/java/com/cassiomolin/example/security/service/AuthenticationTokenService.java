@@ -1,6 +1,6 @@
 package com.cassiomolin.example.security.service;
 
-import com.cassiomolin.example.common.config.Configurable;
+import com.cassiomolin.example.common.configuration.Configurable;
 import com.cassiomolin.example.security.api.AuthenticationTokenDetails;
 import com.cassiomolin.example.security.domain.Authority;
 import com.cassiomolin.example.security.exception.AuthenticationTokenRefreshmentException;

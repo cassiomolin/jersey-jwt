@@ -33,14 +33,16 @@ public class ObjectMapperProvider implements ContextResolver<ObjectMapper> {
 
         ObjectMapper mapper = new ObjectMapper();
 
-        mapper.registerModule(new ParameterNamesModule());
         mapper.registerModule(new Jdk8Module());
         mapper.registerModule(new JavaTimeModule());
+        mapper.registerModule(new ParameterNamesModule());
 
         mapper.enable(SerializationFeature.INDENT_OUTPUT);
         mapper.disable(SerializationFeature.FAIL_ON_EMPTY_BEANS);
         mapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
+
         mapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
+        mapper.enable(DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT);
 
         return mapper;
     }

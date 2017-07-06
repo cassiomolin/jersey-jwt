@@ -1,9 +1,7 @@
 package com.cassiomolin.example.security.service;
 
-import com.cassiomolin.example.common.config.Configurable;
+import com.cassiomolin.example.common.configuration.Configurable;
 
-
-import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.context.Dependent;
 import javax.inject.Inject;
 

@@ -35,14 +35,14 @@ public class AuthenticationFilter implements ContainerRequestFilter {
         String authorizationHeader = requestContext.getHeaderString(HttpHeaders.AUTHORIZATION);
         if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
             String authenticationToken = authorizationHeader.substring(7);
-            handleTokenAuthentication(authenticationToken, requestContext);
+            handleTokenBasedAuthentication(authenticationToken, requestContext);
             return;
         }
 
-        // Other authentication schemes (such as Basic) can be supported as well
+        // Other authentication schemes (such as Basic) could be supported
     }
 
-    private void handleTokenAuthentication(String authenticationToken, ContainerRequestContext requestContext) {
+    private void handleTokenBasedAuthentication(String authenticationToken, ContainerRequestContext requestContext) {
 
         AuthenticationTokenDetails authenticationTokenDetails = authenticationTokenService.parseToken(authenticationToken);
         User user = userService.findByUsernameOrEmail(authenticationTokenDetails.getUsername());

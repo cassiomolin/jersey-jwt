@@ -8,6 +8,8 @@ import java.util.Set;
 
 /**
  * Default {@link Principal} implementation.
+ *
+ * @author cassiomolin
  */
 public final class AuthenticatedUserDetails implements Principal {
 

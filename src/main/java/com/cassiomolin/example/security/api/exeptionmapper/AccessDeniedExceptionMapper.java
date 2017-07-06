@@ -1,4 +1,4 @@
-package com.cassiomolin.example.security.api.exeptionmappers;
+package com.cassiomolin.example.security.api.exeptionmapper;
 
 import com.cassiomolin.example.common.api.model.ApiErrorDetails;
 import com.cassiomolin.example.security.exception.AccessDeniedException;

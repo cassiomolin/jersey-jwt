@@ -1,7 +1,8 @@
-package com.cassiomolin.example.security.api.resources;
+package com.cassiomolin.example.security.api.resource;
 
 import com.cassiomolin.example.security.api.AuthenticationTokenDetails;
 import com.cassiomolin.example.security.api.TokenBasedSecurityContext;
+import com.cassiomolin.example.security.api.model.AuthenticationToken;
 import com.cassiomolin.example.security.api.model.UserCredentials;
 import com.cassiomolin.example.security.service.AuthenticationTokenService;
 import com.cassiomolin.example.security.service.UsernamePasswordValidator;

@@ -1,6 +1,6 @@
 package com.cassiomolin.example;
 
-import com.cassiomolin.example.common.JerseyConfig;
+import com.cassiomolin.example.common.api.config.JerseyConfig;
 import io.undertow.Handlers;
 import io.undertow.Undertow;
 import io.undertow.server.handlers.PathHandler;

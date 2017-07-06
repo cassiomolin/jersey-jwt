@@ -9,6 +9,8 @@ import java.util.Set;
 
 /**
  * Hold details about an authentication token.
+ *
+ * @author cassiomolin
  */
 public final class AuthenticationTokenDetails {
 

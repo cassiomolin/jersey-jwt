@@ -1,7 +1,7 @@
 # REST API with JWT authentication using Jersey and CDI
 
-[![Build Status](https://travis-ci.org/cassiomolin/example-undertow-weld-jersey-jwt.svg?branch=master)](https://travis-ci.org/cassiomolin/example-undertow-weld-jersey-jwt)
-[![MIT Licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/cassiomolin/example-undertow-weld-jersey-jwt/master/LICENSE.txt)
+[![Build Status](https://travis-ci.org/cassiomolin/jersey-jwt.svg?branch=master)](https://travis-ci.org/cassiomolin/jersey-jwt)
+[![MIT Licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/cassiomolin/jersey-jwt/master/LICENSE.txt)
 
 This example application demonstrates how to perform token-based authentication using:
 
@@ -17,7 +17,7 @@ This example application demonstrates how to perform token-based authentication 
 
 This example is inspired in [my Stack Overflow best answer about token-based authentication in Jersey][answer].
 
-For an implementation using Spring Security, have a look at the [`example-springboot-jersey-jwt`][example-with-spring] project.
+For an implementation using Spring Security, have a look at the [`jersey-jwt-springsecurity`][example-with-spring-security] project.
 
 ## How token-based authentication works?
 
@@ -165,13 +165,12 @@ curl -X GET \
 
 ## Targeting the API with Postman
 
-Alternatively to cURL, you can use [Postman][] to target the REST API. The Postman files are available in the [`postman`][postman GitHub directory] directory.
+Alternatively to cURL, you can use [Postman][] to target the REST API. The Postman files are available in the [`postman`](src/main/postman) directory.
 
 
 [RFC 7519]: https://tools.ietf.org/html/rfc7519
 [jwt.io]: http://jwt.io/
 [jti claim]: https://tools.ietf.org/html/rfc7519#section-4.1.7
 [Postman]: https://www.getpostman.com/
-[postman GitHub directory]: https://github.com/cassiomolin/example-undertow-weld-jersey-jwt/tree/master/src/main/postman
 [answer]: https://stackoverflow.com/a/26778123/1426227
-[example-with-spring]: https://github.com/cassiomolin/example-springboot-jersey-jwt
+[example-with-spring-security]: https://github.com/cassiomolin/jersey-jwt-springsecurity

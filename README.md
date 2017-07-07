@@ -100,7 +100,7 @@ Valid credentials must be sent in the request payload to be exchanged for a toke
 
 ```bash
 curl -X POST \
-  http://localhost:8080/api/auth \
+  'http://localhost:8080/api/auth' \
   -H 'Accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -115,7 +115,7 @@ No authentication is required to perform this operation.
 
 ```bash
 curl -X GET \
-  http://localhost:8080/api/greetings/public \
+  'http://localhost:8080/api/greetings/public' \
   -H 'Accept: text/plain'
 ```
 
@@ -125,7 +125,7 @@ Authentication and `USER` role are required to perform this operation.
 
 ```bash
 curl -X GET \
-  http://localhost:8080/api/greetings/protected \
+  'http://localhost:8080/api/greetings/protected' \
   -H 'Accept: text/plain' \
   -H 'Authorization: Bearer <authentication-token>'
 ```
@@ -136,7 +136,7 @@ Authentication and `ADMIN` role are required to perform this operation.
 
 ```bash
 curl -X GET \
-  http://localhost:8080/api/users \
+  'http://localhost:8080/api/users' \
   -H 'Accept: application/json' \
   -H 'Authorization: Bearer <authentication-token>'
 ```
@@ -147,7 +147,7 @@ Authentication and `ADMIN` role are required to perform this operation.
 
 ```bash
 curl -X GET \
-  http://localhost:8080/api/users/<user-id> \
+  'http://localhost:8080/api/users/<user-id>' \
   -H 'Accept: application/json' \
   -H 'Authorization: Bearer <authentication-token>'
 ```
@@ -158,7 +158,7 @@ No authentication is required to perform this operation. However, if the request
 
 ```bash
 curl -X GET \
-  http://localhost:8080/api/users/me \
+  'http://localhost:8080/api/users/me' \
   -H 'Accept: application/json' \
   -H 'Authorization: Bearer <authentication-token>'
 ```

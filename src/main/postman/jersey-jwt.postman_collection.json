@@ -1,0 +1,272 @@
+{
+	"variables": [],
+	"info": {
+		"name": "jersey-jwt",
+		"_postman_id": "0c9e8bb5-8e87-c0fa-a083-a309cd056bec",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"description": "",
+			"item": [
+				{
+					"name": "Authenticate as admin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"if (responseCode.code === 200) {",
+									"    var data = JSON.parse(responseBody);",
+									"    postman.setEnvironmentVariable(\"auth.token\", data.token);",
+									"} else {",
+									"    postman.setEnvironmentVariable(\"auth.token\", '');",
+									"}"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{config.baseUrl}}/api/auth",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"admin\",\n  \"password\": \"password\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Authenticate as user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"if (responseCode.code === 200) {",
+									"    var data = JSON.parse(responseBody);",
+									"    postman.setEnvironmentVariable(\"auth.token\", data.token);",
+									"} else {",
+									"    postman.setEnvironmentVariable(\"auth.token\", '');",
+									"}"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{config.baseUrl}}/api/auth",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"user\",\n  \"password\": \"password\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Authenticate as disabled",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"if (responseCode.code === 200) {",
+									"    var data = JSON.parse(responseBody);",
+									"    postman.setEnvironmentVariable(\"auth.token\", data.token);",
+									"} else {",
+									"    postman.setEnvironmentVariable(\"auth.token\", '');",
+									"}"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{config.baseUrl}}/api/auth",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"disabled\",\n  \"password\": \"password\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Greetings",
+			"description": "",
+			"item": [
+				{
+					"name": "Get public greeting",
+					"request": {
+						"url": "{{config.baseUrl}}/api/greetings/public",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "text/plain",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get protected greeting",
+					"request": {
+						"url": "{{config.baseUrl}}/api/greetings/protected",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "text/plain",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{auth.token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"description": "",
+			"item": [
+				{
+					"name": "Get all users",
+					"request": {
+						"url": "{{config.baseUrl}}/api/users",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{auth.token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get a user by id",
+					"request": {
+						"url": "{{config.baseUrl}}/api/users/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{auth.token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get authenticated user",
+					"request": {
+						"url": "{{config.baseUrl}}/api/users/me",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{auth.token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

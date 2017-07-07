@@ -8,7 +8,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Model that details about an authentication token.
+ * Model that holds details about an authentication token.
  *
  * @author cassiomolin
  */

@@ -56,8 +56,8 @@ To build and run this application, follow these steps:
 1. Compile the project: `mvn clean compile`.
 1. Package the application: `mvn package`.
 1. Change into the `target` directory: `cd target`
-1. You should see a file with the following or a similar name: `undertow-weld-jersey-jwt-1.0.jar`.
-1. Execute the JAR: `java -jar undertow-weld-jersey-jwt-1.0.jar`.
+1. You should see a file with the following or a similar name: `jersey-jwt-1.0.jar`.
+1. Execute the JAR: `java -jar jersey-jwt-1.0.jar`.
 1. The application should be available at `http://localhost:8080/api`.
 
 When the application starts up, the database will be populated with the following users:

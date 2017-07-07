@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * Resource class for user-related operations.
+ * JAX-RS resource class that provides operations for users.
  *
  * @author cassiomolin
  */

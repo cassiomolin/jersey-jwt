@@ -8,7 +8,7 @@ import java.util.Set;
 import static com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 /**
- * API model returning user details.
+ * API model for returning user details.
  *
  * @author cassiomolin
  */

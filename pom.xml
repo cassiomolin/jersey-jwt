@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.cassiomolin.example</groupId>
-    <artifactId>undertow-weld-jersey-jwt</artifactId>
+    <artifactId>jersey-jwt</artifactId>
     <version>1.0</version>
 
     <properties>
@@ -66,7 +66,7 @@
             <version>${jersey.version}</version>
         </dependency>
 
-        <!-- Jackson -->
+        <!-- Jackson modules -->
         <dependency>
             <groupId>com.fasterxml.jackson.module</groupId>
             <artifactId>jackson-module-parameter-names</artifactId>

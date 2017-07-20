@@ -84,7 +84,7 @@ Find below a quick description of the most relevant classes of this application:
 
 - [`AuthenticationFilter`](src/main/java/com/cassiomolin/example/security/api/filter/AuthenticationFilter.java): [`ContainerRequestFilter`](https://docs.oracle.com/javaee/7/api/javax/ws/rs/container/ContainerRequestFilter.html) implementation for extracting the authentication token from the `Authorization` header of the HTTP request.
 
-- [`AuthorizationFilter`](src/main/java/com/cassiomolin/example/security/api/filter/AuthorizationFilter.java): [`ContainerRequestFilter`](https://docs.oracle.com/javaee/7/api/javax/ws/rs/container/ContainerRequestFilter.html) implementation for performing role-based authorization using the Java Security annotations such as [`@RolesAllowed`](https://docs.oracle.com/javaee/7/api/javax/annotation/security/RolesAllowed.html), [`@PermitAll`](https://docs.oracle.com/javaee/7/api/javax/annotation/security/PermitAll.html) and [`@DenyAll`](https://docs.oracle.com/javaee/7/api/javax/annotation/security/DenyAll.html). This implementation uses the Jersey's [`RolesAllowedDynamicFeature`](https://github.com/jersey/jersey/blob/master/core-server/src/main/java/org/glassfish/jersey/server/filter/RolesAllowedDynamicFeature.java) as reference and should work with other JAX-RS implementations.
+- [`AuthorizationFilter`](src/main/java/com/cassiomolin/example/security/api/filter/AuthorizationFilter.java): [`ContainerRequestFilter`](https://docs.oracle.com/javaee/7/api/javax/ws/rs/container/ContainerRequestFilter.html) implementation for performing role-based authorization using Java Security annotations such as [`@RolesAllowed`](https://docs.oracle.com/javaee/7/api/javax/annotation/security/RolesAllowed.html), [`@PermitAll`](https://docs.oracle.com/javaee/7/api/javax/annotation/security/PermitAll.html) and [`@DenyAll`](https://docs.oracle.com/javaee/7/api/javax/annotation/security/DenyAll.html). This implementation uses the Jersey's [`RolesAllowedDynamicFeature`](https://github.com/jersey/jersey/blob/master/core-server/src/main/java/org/glassfish/jersey/server/filter/RolesAllowedDynamicFeature.java) as reference and should work with other JAX-RS implementations.
 
 - [`TokenBasedSecurityContext`](src/main/java/com/cassiomolin/example/security/api/TokenBasedSecurityContext.java): [`SecurityContext`](https://docs.oracle.com/javaee/7/api/javax/ws/rs/core/SecurityContext.html) implementation for token-based authentication.
 
@@ -165,7 +165,7 @@ curl -X GET \
 
 ## Targeting the API with Postman
 
-Alternatively to cURL, you can use [Postman][] to target the REST API. The Postman files are available in the [`postman`](src/main/postman) directory.
+Alternatively to cURL, you can use [Postman][] to target the REST API. The Postman files are available in the [`src/main/postman`](src/main/postman) directory.
 
 
 [RFC 7519]: https://tools.ietf.org/html/rfc7519

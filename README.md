@@ -163,7 +163,7 @@ curl -X GET \
   -H 'Authorization: Bearer <authentication-token>'
 ```
 
-## Targeting the API with Postman
+## Targeting the REST API with Postman
 
 Alternatively to cURL, you can use [Postman][] to target the REST API. The Postman files are available in the [`src/main/postman`](src/main/postman) directory.
 

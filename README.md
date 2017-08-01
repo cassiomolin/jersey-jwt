@@ -17,7 +17,7 @@ This example application demonstrates how to perform token-based authentication 
 
 This example is inspired in [my Stack Overflow best answer about token-based authentication in Jersey][answer].
 
-For an implementation using Spring Security, have a look at the [`jersey-jwt-springsecurity`][example-with-spring-security] project.
+> **Note:** For an implementation using Spring Security, have a look at the [`jersey-jwt-springsecurity`][example-with-spring-security] project.
 
 ## How token-based authentication works?
 
